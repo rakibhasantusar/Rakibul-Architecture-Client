@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Service from './servicesection/Service';
 import Slider from './Slider/Slider';
 
@@ -24,7 +24,9 @@ const Home = () => {
                     }
                 </div>
                 <div>
-                    <button className='btn text-2xl rounded-none mt-20'>See all</button>
+                    <Link to='/services'>
+                        <button className='btn text-2xl rounded-none mt-20'>See all</button>
+                    </Link>
                 </div>
             </div>
 
