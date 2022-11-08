@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/logo.png";
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext)
+
+    const handlerLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.error(err))
+
+    }
+
+
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -16,7 +28,8 @@ const Header = () => {
                         Rakibul-Architecture
                     </span>
                 </NavLink>
-                <ul className="flex items-center hidden space-x-8 lg:flex">
+                {/* flex lagle ekhane deya jai */}
+                <ul className=" items-center hidden space-x-8 lg:flex">
                     <li>
                         <NavLink
                             to="/home"
@@ -28,14 +41,36 @@ const Header = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink
-                            to="/statistics"
-                            className={({ isActive }) =>
-                                isActive ? 'text-red-400 font-bold' :
-                                    'font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 '}
-                        >
-                            Statistics
-                        </NavLink>
+                        <>
+                            {
+                                user?.uid ?
+                                    <>
+                                        <NavLink className={({ isActive }) =>
+                                            isActive ? 'text-red-400 font-bold ml-6' :
+                                                'font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 ml-6 '}
+                                            to='/myreviews'>My Reviews</NavLink>
+                                        <NavLink className={({ isActive }) =>
+                                            isActive ? 'text-red-400 font-bold ml-6' :
+                                                'font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 ml-6 '}
+                                            to='/addservice'>Add Service</NavLink>
+                                        <button className=' btn font-bold tracking-wide text-gray-100 transition-colors duration-200 hover:text-deep-purple-accent-400 ml-6 ' onClick={handlerLogOut}>logout</button>
+                                    </>
+                                    :
+                                    <>
+                                        <NavLink
+                                            to="/login"
+                                            className={({ isActive }) =>
+                                                isActive ? 'text-red-400 font-bold' :
+                                                    'font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 '}>Login</NavLink>
+                                        <NavLink className={({ isActive }) =>
+                                            isActive ? 'text-red-400 font-bold ml-6' :
+                                                'font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 ml-6 '}
+                                            to='/signup'>SignUp</NavLink>
+                                    </>
+                            }
+                        </>
+
+
                     </li>
                     <li>
                         <NavLink
@@ -132,7 +167,7 @@ const Header = () => {
                     )}
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
