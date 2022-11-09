@@ -19,7 +19,7 @@ const Service = ({ service }) => {
                 <p>{description.slice(0, 100)} </p>
                 <div className="card-actions items-center justify-between">
                     <div>
-                        <p className='text-xl'>Price: ${price} <span className='ml-7'> {rating.rate} <FaStar className=' inline-block h-4 mb-1' /> </span></p>
+                        <p className='text-xl'>Price: ${parseFloat(price) ? price : 0} <span className='ml-7'> {rating} <FaStar className=' inline-block h-4 mb-1' /> </span></p>
                     </div>
                     <Link to={`/servicedetail/${_id}`}>
                         <button className="btn rounded-none">Details</button>

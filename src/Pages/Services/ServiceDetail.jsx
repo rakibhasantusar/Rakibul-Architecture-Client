@@ -82,10 +82,10 @@ const ServiceDetail = () => {
                             <div className='flex  items-center justify-around flex-wrap w-[50%] mx-auto'>
                                 <div>
                                     <h3 className="text-3xl font-semibold dark:text-black mb-2">Price: ${price}</h3>
-                                    <h3 className="text-3xl font-semibold dark:text-black">Rating: {rating.rate} <FaStar className='inline-block mb-3' /></h3>
+                                    <h3 className="text-3xl font-semibold dark:text-black">Rating: {rating || 0}  <FaStar className='inline-block mb-3' /></h3>
                                 </div>
                                 <div >
-                                    {
+                                    {list &&
                                         list.map((sl, index) => <p
                                             key={index}
                                             className='text-black text-left' >
