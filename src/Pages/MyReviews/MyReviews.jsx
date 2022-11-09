@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { FaReceipt } from 'react-icons/fa';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import ReviewDetail from './ReviewDetail';
@@ -13,7 +14,26 @@ const MyReviews = () => {
             .then(data => setReviews(data))
     }, [user?.email])
 
-    console.log(user)
+
+    const handlerDelete = id => {
+        const proceed = window.confirm('Want to delete this review?')
+        if (proceed) {
+            fetch(`http://localhost:5000/reviews${id}`, {
+                method: "DELETE",
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.deletedCount > 0) {
+                        toast.success("delete review done")
+                        const exist = reviews.filter(rev => rev._id !== id)
+                        setReviews(exist)
+                    }
+                })
+        }
+    }
+
+
     return (
         <div>
             <div className="dark:bg-black">
@@ -46,6 +66,7 @@ const MyReviews = () => {
                             reviews.map(review => <ReviewDetail
                                 key={review._id}
                                 review={review}
+                                handlerDelete={handlerDelete}
                             ></ReviewDetail>)
                         }
                     </tbody>

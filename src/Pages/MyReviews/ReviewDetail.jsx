@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaPen } from 'react-icons/fa';
 
-const ReviewDetail = ({ review }) => {
-    const { userName, message, serviceName } = review
+const ReviewDetail = ({ review, handlerDelete }) => {
+    const { _id, userName, message, serviceName } = review
+
+
     return (
         <tr>
             <th>
@@ -34,7 +36,7 @@ const ReviewDetail = ({ review }) => {
                 </button>
             </td>
             <th>
-                <button>
+                <button onClick={() => handlerDelete(_id)}>
                     X
                 </button>
             </th>
