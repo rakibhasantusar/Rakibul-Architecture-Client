@@ -19,6 +19,7 @@ const Login = () => {
         providerLogin(googleProvider)
             .then(res => {
                 const user = res.user;
+                console.log(user);
                 if (user.uid) {
                     navigate(from, { replace: true })
                 } else {
@@ -86,17 +87,17 @@ const Login = () => {
                             <form onSubmit={handlerSignIn} className="space-y-8 ng-untouched ng-pristine ng-valid">
                                 <div className="space-y-4">
                                     <div className="space-y-2">
-                                        <label for="email" className="block text-sm text-left">Email address</label>
-                                        <input type="email" name="email" id="email" placeholder="Email Address" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-gray-300" />
+                                        <label className="block text-sm text-left">Email address</label>
+                                        <input type="email" name="email" placeholder="Email Address" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-gray-300" />
                                     </div>
                                     <div className="space-y-2">
                                         <div className="flex justify-between">
-                                            <label for="password" className="text-sm">Password</label>
+                                            <label className="text-sm">Password</label>
                                         </div>
-                                        <input type="password" name="password" id="password" placeholder="Password" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-gray-300" />
+                                        <input type="password" name="password" placeholder="Password" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-gray-300" />
                                     </div>
                                 </div>
-                                <button type="button" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-gray-300 dark:text-gray-900">Sign in</button>
+                                <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-gray-300 dark:text-gray-900">Sign in</button>
                             </form>
                             <p className="text-sm text-center my-5 dark:text-gray-400">Dont have account?
                                 <Link to='/signup' rel="noopener noreferrer" className="focus:underline hover:underline"> Sign up here</Link>
@@ -118,7 +119,7 @@ const Login = () => {
                                 </button>
                             </div>
                         </div>
-                        <p>{error}</p>
+                        <p className='text-red-600'>{error}</p>
                     </div>
                 </div>
             </section>
