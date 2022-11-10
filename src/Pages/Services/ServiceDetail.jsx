@@ -138,23 +138,33 @@ const ServiceDetail = () => {
 
                 }
 
-                <form onSubmit={handleReview}>
-                    <div className="flex flex-col container w-[75%] mx-auto mb-20  p-8 shadow-sm  lg:p-12 dark:bg-black dark:text-gray-100">
-                        <div className="flex flex-col items-center w-full">
-                            <h2 className="text-3xl font-semibold text-center">Your opinion matters!</h2>
-                            <div className="flex flex-col items-center py-6 space-y-3">
-                                <span className="text-center">How was your experience?</span>
+                <>
+                    {user ?
+                        <form onSubmit={handleReview}>
+                            <div className="flex flex-col container w-[75%] mx-auto mb-20  p-8 shadow-sm  lg:p-12 dark:bg-black dark:text-gray-100">
+                                <div className="flex flex-col items-center w-full">
+                                    <h2 className="text-3xl font-semibold text-center">Your opinion matters!</h2>
+                                    <div className="flex flex-col items-center py-6 space-y-3">
+                                        <span className="text-center">How was your experience?</span>
+                                    </div>
+                                    <div className="flex flex-col w-full">
+                                        <textarea name='message' rows="3" placeholder="Give your opinion here..." className="p-4 rounded-md resize-none dark:text-gray-100 dark:bg-gray-900"></textarea>
+                                        <button type="submit" className="py-4 my-8 font-semibold rounded-md dark:text-gray-900 dark:bg-gray-400 text-xl">Leave feedback</button>
+                                    </div>
+                                </div>
+                                <div className="flex items-center justify-center">
+                                    <a rel="noopener noreferrer" href="#" className="text-sm dark:text-gray-400">Maybe later</a>
+                                </div>
                             </div>
-                            <div className="flex flex-col w-full">
-                                <textarea name='message' rows="3" placeholder="Give your opinion here..." className="p-4 rounded-md resize-none dark:text-gray-100 dark:bg-gray-900"></textarea>
-                                <button type="submit" className="py-4 my-8 font-semibold rounded-md dark:text-gray-900 dark:bg-gray-400 text-xl">Leave feedback</button>
-                            </div>
-                        </div>
-                        <div className="flex items-center justify-center">
-                            <a rel="noopener noreferrer" href="#" className="text-sm dark:text-gray-400">Maybe later</a>
-                        </div>
-                    </div>
-                </form>
+                        </form>
+                        :
+                        <Link to='/login' className='mx-5'>
+                            <button className="btn btn-outline my-20 text-xl w-75 "> <span className='p-2'>For post a review you Have to login first</span> </button>
+                        </Link>
+                    }
+                </>
+
+
             </section>
         </div>
     );
