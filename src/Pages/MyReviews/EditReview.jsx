@@ -19,6 +19,7 @@ const EditReview = () => {
         const reviewed = {
             message: message,
         }
+        console.log(reviewed)
 
         fetch(`http://localhost:5000/reviews/${_id}`, {
             method: "PATCH",
@@ -30,9 +31,8 @@ const EditReview = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.acknowledged) {
+                if (data.success) {
                     toast.success("Your Review updated");
-                    form.reset()
                     navigate('/myreviews')
                 }
             })
@@ -45,7 +45,7 @@ const EditReview = () => {
 
     return (
         <div>
-            <div>
+            <div className='my-24'>
                 <form onSubmit={handleUpdate}>
                     <div className="flex flex-col container w-[75%] mx-auto mb-20  p-8 shadow-sm  lg:p-12 dark:bg-black dark:text-gray-100">
                         <div className="flex flex-col items-center w-full">

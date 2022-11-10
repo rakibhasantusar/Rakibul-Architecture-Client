@@ -46,6 +46,7 @@ const Login = () => {
         signIn(email, password)
             .then(res => {
                 const user = res.user;
+
                 form.reset()
                 setError('')
                 if (user.uid) {

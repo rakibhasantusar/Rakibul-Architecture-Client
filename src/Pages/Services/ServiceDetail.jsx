@@ -12,14 +12,15 @@ const ServiceDetail = () => {
     const { user } = useContext(AuthContext)
     useSetTitle("service-Detail");
 
-
     const [reviews, setReviews] = useState([])
+    const [refresh, setRefresh] = useState(false)
 
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?service=${_id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
-    }, [_id])
+    }, [_id, refresh])
+
 
     const handleReview = e => {
         e.preventDefault();
@@ -49,6 +50,7 @@ const ServiceDetail = () => {
                 console.log(data)
                 if (data.acknowledged) {
                     toast.success("Thanks for your Review ");
+                    setRefresh(!refresh)
                     form.reset()
                 }
             })
