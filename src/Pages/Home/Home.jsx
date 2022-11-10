@@ -25,13 +25,13 @@ const Home = () => {
                 </div>
                 <div>
                     <Link to='/services'>
-                        <button className='btn text-2xl rounded-none mt-20'>See all</button>
+                        <button className='btn text-2xl rounded-none mt-20'>See all Services</button>
                     </Link>
                 </div>
             </div>
             <section className="p-6 dark:bg-black dark:text-gray-100 container mx-auto">
-                <h2 className='text-6xl font-semibold mb-5'>Statistics Area</h2>
-                <hr className='w-[50%] mx-auto mb-20 border-2 border-dashed ' />
+                <h2 className='text-5xl font-semibold mb-5'>Statistics Area</h2>
+                <hr className='w-[30%] mx-auto mb-20 border-2 border-dashed ' />
                 <div className="container mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3">
                     <div className="flex flex-col justify-start m-2 lg:m-6">
                         <p className="text-4xl font-bold leading-none lg:text-6xl">500+</p>

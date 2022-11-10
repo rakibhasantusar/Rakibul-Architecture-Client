@@ -1,9 +1,10 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { FaPen } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ReviewDetail = ({ review, handlerDelete }) => {
     const { _id, userName, message, serviceName } = review
-
 
     return (
         <tr>
@@ -30,10 +31,14 @@ const ReviewDetail = ({ review, handlerDelete }) => {
                 <span className="">{message}</span>
             </td>
             <td>{serviceName}</td>
+
             <td>
-                <button>
-                    <FaPen />
-                </button>
+
+                <Link to={`/editreview/${_id}`}>
+                    <button><FaPen /></button>
+                </Link>
+
+
             </td>
             <th>
                 <button onClick={() => handlerDelete(_id)}>

@@ -145,12 +145,34 @@ const Header = () => {
                                             </NavLink>
                                         </li>
                                         <li>
-                                            <NavLink
-                                                to="/statistics"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                            >
-                                                Statistics
-                                            </NavLink>
+                                            <>
+                                                {
+                                                    user?.uid ?
+                                                        <div className='flex flex-col'>
+                                                            <NavLink className={({ isActive }) =>
+                                                                isActive ? 'text-red-400 font-bold ml-6' :
+                                                                    'font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 ml-6 '}
+                                                                to='/myreviews'>My Reviews</NavLink>
+                                                            <NavLink className={({ isActive }) =>
+                                                                isActive ? 'text-red-400 font-bold ml-6' :
+                                                                    'my-3 font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 ml-6 '}
+                                                                to='/addservice'>Add Service</NavLink>
+                                                            <button className=' btn font-bold tracking-wide text-gray-100 transition-colors duration-200 hover:text-deep-purple-accent-400 ml-6 ' onClick={handlerLogOut}>logout</button>
+                                                        </div>
+                                                        :
+                                                        <div className='flex flex-col mb-4 '>
+                                                            <NavLink
+                                                                to="/login"
+                                                                className={({ isActive }) =>
+                                                                    isActive ? 'text-red-400 font-bold' :
+                                                                        ' mb-4 font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 '}>Login</NavLink>
+                                                            <NavLink className={({ isActive }) =>
+                                                                isActive ? 'text-red-400 font-bold ml-6' :
+                                                                    'font-bold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 ml-6 '}
+                                                                to='/signup'>SignUp</NavLink>
+                                                        </div>
+                                                }
+                                            </>
                                         </li>
                                         <li>
                                             <NavLink
