@@ -1,6 +1,8 @@
 import React from 'react';
+import useSetTitle from '../dynamicTitle/useSetTitle';
 
 const Blog = () => {
+    useSetTitle("Blog");
     return (
         <div>
             <section>

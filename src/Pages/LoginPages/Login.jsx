@@ -4,12 +4,14 @@ import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import image from "../../assets/login.png";
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useSetTitle from '../../dynamicTitle/useSetTitle';
 
 const Login = () => {
     const { signIn, setLoading, providerLogin, } = useContext(AuthContext)
     const [error, setError] = useState('')
     const navigate = useNavigate()
     const location = useLocation()
+    useSetTitle("Login");
 
 
 

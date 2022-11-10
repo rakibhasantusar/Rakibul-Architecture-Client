@@ -1,11 +1,12 @@
 import React from 'react';
 import { FaHome } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
+import useSetTitle from '../../dynamicTitle/useSetTitle';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
     const services = useLoaderData()
-
+    useSetTitle("Services");
     return (
         <section>
             <div className="dark:bg-black">

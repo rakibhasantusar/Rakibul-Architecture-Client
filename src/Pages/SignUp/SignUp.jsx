@@ -3,10 +3,12 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import image from "../../assets/fine_tune.jpg";
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useSetTitle from '../../dynamicTitle/useSetTitle';
 
 const SignUp = () => {
     const [error, setError] = useState('')
     const { createUser, upDateUserProfile } = useContext(AuthContext)
+    useSetTitle("Sign-Up");
 
     const handlerSubmit = e => {
         e.preventDefault();

@@ -3,11 +3,13 @@ import toast from 'react-hot-toast';
 import { FaReceipt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useSetTitle from '../../dynamicTitle/useSetTitle';
 import ReviewDetail from './ReviewDetail';
 
 const MyReviews = () => {
     const { user } = useContext(AuthContext)
     const [reviews, setReviews] = useState([])
+    useSetTitle("My-Reviews");
 
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?email=${user?.email}`)

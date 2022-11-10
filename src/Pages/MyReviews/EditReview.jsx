@@ -1,9 +1,11 @@
 import React from 'react';
 import toast from 'react-hot-toast';
 import { useLoaderData, useNavigate } from 'react-router-dom';
+import useSetTitle from '../../dynamicTitle/useSetTitle';
 
 const EditReview = () => {
     const navigate = useNavigate()
+    useSetTitle("Edit-Review");
 
     const editReview = useLoaderData()
     console.log(editReview)

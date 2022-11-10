@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import useSetTitle from '../../dynamicTitle/useSetTitle';
 import Service from './servicesection/Service';
 import Slider from './Slider/Slider';
 
 const Home = () => {
     const services = useLoaderData()
+    useSetTitle("Home");
 
     return (
         <div>

@@ -1,8 +1,10 @@
 import React from 'react';
 import toast from 'react-hot-toast';
 import image from "../../assets/banner-signup.png";
+import useSetTitle from '../../dynamicTitle/useSetTitle';
 
 const AddServices = () => {
+    useSetTitle("Add-Services");
 
     const handleAddService = e => {
         e.preventDefault();
