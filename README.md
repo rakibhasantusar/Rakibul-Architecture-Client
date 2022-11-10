@@ -1,71 +1,38 @@
-# Getting Started with Create React App
+# Project Name: Rakibul-Architecture service website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The services that an architect typically provides include concept design development, preparation of construction documents, and construction administration. Architects also provide a wide variety of additional services including feasibility studies, architectural programming and project management.
+Design Development– Once a schematic design is agreed upon and there is a clearer definition of the scope and quality of the finished project the design development phase begins. Additional cost projections help determine whether or not the design conforms to the preliminary budget, or what, if any, adjustments need to be made.
 
-## Available Scripts
+## •Live Link
 
-In the project directory, you can run:
+Hosted in Firebase -> [Rakibul-Architecture_website_link](https://.web.app/)
 
-### `npm start`
+## `features & Description below:`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🤍 This website made with JavaScript library React v-18.2.0 & CSS React Tilwind FrameWork & daisyui Library
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- In this project firstly I use React Router v-(6.4.2) which is make our website route faster without loading
 
-### `npm test`
+* This is my own service website
+* I use Firebase as my website deployer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Also i use React icon, SVG image etc
+* I use Component from many website
+* This website is fully responsive
+* In this website I made with MongoDB server and Vercel
+* This website is helpfull for Home Owner and future planner
 
-### `npm run build`
+■ Construction Documents– A continuation of the design development phase working drawings and specifications are developed after design concepts have been decided. These construction documents are what is required by the local municipalities in order to obtain building permits. They are also used to solicit bids from the various contractors that will be required to build the project.
+Bidding and Negotiation– An architect can advise on the choice of contractor by evaluating competitive bids. The architect assists in the bid evaluation and assists in the preparation of the contract between the client and the contractor.
+Construction and Contract Administration– The architect consults with the client and advises during construction. On-site visits help determine if construction is proceeding in general accordance with the construction document and design intent. It is also the architect’s role to advise if the materials and workmanship meet acceptable standards
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Resources & Credits
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For Routing Components ->
+[React Router](https://reactrouter.com/en/main)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For Hosting Server ->
+[Vercel ](https://vercel.com/)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# b6a11-service-review-client-side-rakibhasantusar
+For DataBase ->
+[MongoDB ](https://cloud.mongodb.com/)
