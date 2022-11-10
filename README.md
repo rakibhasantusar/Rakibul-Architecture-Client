@@ -5,7 +5,7 @@ Design Development– Once a schematic design is agreed upon and there is a clea
 
 ## •Live Link
 
-Hosted in Firebase -> [Rakibul-Architecture_website_link](https://.web.app/)
+Hosted in Firebase -> [Rakibul-Architecture_website_link](https://rakibul-architecture.web.app/)
 
 ## `features & Description below:`
 
@@ -13,7 +13,7 @@ Hosted in Firebase -> [Rakibul-Architecture_website_link](https://.web.app/)
 
 - In this project firstly I use React Router v-(6.4.2) which is make our website route faster without loading
 
-* This is my own service website
+* This is my own Architectural service website
 * I use Firebase as my website deployer
 
 * Also i use React icon, SVG image etc

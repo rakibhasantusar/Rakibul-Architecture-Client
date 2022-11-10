@@ -21,7 +21,7 @@ const EditReview = () => {
         }
         console.log(reviewed)
 
-        fetch(`http://localhost:5000/reviews/${_id}`, {
+        fetch(`https://rakibul-architecture-server.vercel.app/reviews/${_id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json",

@@ -16,7 +16,7 @@ const ServiceDetail = () => {
     const [refresh, setRefresh] = useState(false)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?service=${_id}`)
+        fetch(`https://rakibul-architecture-server.vercel.app/reviews?service=${_id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [_id, refresh])
@@ -38,7 +38,7 @@ const ServiceDetail = () => {
             message
         }
 
-        fetch("http://localhost:5000/reviews", {
+        fetch("https://rakibul-architecture-server.vercel.app/reviews", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
