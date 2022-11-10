@@ -5,6 +5,8 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useSetTitle from '../../dynamicTitle/useSetTitle';
 import OtherReview from '../MyReviews/OtherReview';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const ServiceDetail = () => {
     const serviceDetail = useLoaderData()
@@ -80,8 +82,13 @@ const ServiceDetail = () => {
                 <div className="container mx-auto p-8 shadow-md shadow-slate-500 border-black border-2 dark:text-gray-100">
                     <div className="space-y-4">
                         <div className="space-y-2">
-                            <img src={image} alt="" className="block object-cover object-center w-full rounded-md max-h-[700px]  dark:bg-gray-500" />
+                            <PhotoProvider>
+                                <PhotoView src={image}>
+                                    <img src={image} alt="" className="block object-cover object-center w-full rounded-md max-h-[700px]  dark:bg-gray-500" />
+                                </PhotoView>
+                            </PhotoProvider>
                         </div>
+
                         <div className="space-y-2">
                             <div className='mb-10'>
                                 <h3 className="text-4xl font-semibold mb-4 dark:text-black">{title}</h3>
