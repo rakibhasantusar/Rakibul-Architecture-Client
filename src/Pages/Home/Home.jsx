@@ -8,7 +8,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className='mb-5'>
+            <div className='mb-24'>
                 <Slider></Slider>
             </div>
 
@@ -23,13 +23,13 @@ const Home = () => {
                         ></Service>)
                     }
                 </div>
-                <div>
+                <div className='my-10'>
                     <Link to='/services'>
                         <button className='btn text-2xl rounded-none mt-20'>See all Services</button>
                     </Link>
                 </div>
             </div>
-            <section className="p-6 dark:bg-black dark:text-gray-100 container mx-auto">
+            <section className="p-6 my-24 dark:bg-black dark:text-gray-100 container mx-auto">
                 <h2 className='text-5xl font-semibold mb-5'>Statistics Area</h2>
                 <hr className='w-[30%] mx-auto mb-20 border-2 border-dashed ' />
                 <div className="container mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3">
@@ -60,7 +60,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="my-8">
+            <section className="my-24">
                 <div className="container mx-auto flex flex-col items-center pb-6 mb-4 md:p-10 md:px-12">
                     <h1 className="text-4xl font-semibold leading-none text-center">What My customers are saying about Me</h1>
                 </div>

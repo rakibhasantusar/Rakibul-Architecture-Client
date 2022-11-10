@@ -107,28 +107,32 @@ const ServiceDetail = () => {
                     <hr className='w-[50%] mx-auto mb-20 border-2 border-dashed ' />
                 </div>
 
+                {
+                    reviews.length ?
+                        <div className=" container mx-auto my-20 overflow-x-auto w-full shadow-lg border-2">
+                            <table className="table w-full ">
+                                {/* <!-- head --> */}
+                                <thead  >
+                                    <tr className='text-black text-bold'>
+                                        <th>User photo</th>
+                                        <th>User Name</th>
+                                        <th>Review Text</th>
+                                        <th>Service Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        reviews.map(review => <OtherReview
+                                            key={review._id}
+                                            review={review}
+                                        ></OtherReview>)
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        : <h2 className='text-5xl my-24' > no reviews Added</h2>
 
-                <div className=" container mx-auto my-20 overflow-x-auto w-full shadow-lg border-2">
-                    <table className="table w-full ">
-                        {/* <!-- head --> */}
-                        <thead  >
-                            <tr className='text-black text-bold'>
-                                <th>User photo</th>
-                                <th>User Name</th>
-                                <th>Review Text</th>
-                                <th>Service Name</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                reviews.map(review => <OtherReview
-                                    key={review._id}
-                                    review={review}
-                                ></OtherReview>)
-                            }
-                        </tbody>
-                    </table>
-                </div>
+                }
 
                 <form onSubmit={handleReview}>
                     <div className="flex flex-col container w-[75%] mx-auto mb-20  p-8 shadow-sm  lg:p-12 dark:bg-black dark:text-gray-100">
