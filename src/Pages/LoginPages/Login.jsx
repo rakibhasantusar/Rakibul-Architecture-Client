@@ -7,13 +7,14 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useSetTitle from '../../dynamicTitle/useSetTitle';
 
 const Login = () => {
-    const { signIn, setLoading, providerLogin, } = useContext(AuthContext)
+    const { signIn, setLoading, providerLogin, loading } = useContext(AuthContext)
     const [error, setError] = useState('')
     const navigate = useNavigate()
     const location = useLocation()
     useSetTitle("Login");
-
-
+    if (loading) {
+        return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-black"></div>
+    }
 
     const googleProvider = new GoogleAuthProvider();
 

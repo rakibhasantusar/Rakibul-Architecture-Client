@@ -1,12 +1,21 @@
-import React from 'react';
 import { FaHome } from 'react-icons/fa';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useSetTitle from '../../dynamicTitle/useSetTitle';
 import ServiceCard from './ServiceCard';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Services = () => {
     const services = useLoaderData()
     useSetTitle("Services");
+
+    const { loading } = useContext(AuthContext)
+
+    if (loading) {
+        return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-black"></div>
+    }
+
+
     return (
         <section>
             <div className="dark:bg-black">

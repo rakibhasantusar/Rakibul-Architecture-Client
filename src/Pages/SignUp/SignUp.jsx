@@ -7,8 +7,12 @@ import useSetTitle from '../../dynamicTitle/useSetTitle';
 
 const SignUp = () => {
     const [error, setError] = useState('')
-    const { createUser, upDateUserProfile } = useContext(AuthContext)
+    const { createUser, upDateUserProfile, loading } = useContext(AuthContext)
     useSetTitle("Sign-Up");
+
+    if (loading) {
+        return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-black"></div>
+    }
 
     const handlerSubmit = e => {
         e.preventDefault();
