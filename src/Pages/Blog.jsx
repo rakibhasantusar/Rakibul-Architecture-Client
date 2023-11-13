@@ -6,7 +6,7 @@ const Blog = () => {
     return (
         <div>
             <section>
-                <div className="container mx-auto shadow-2xl   dark:bg-black">
+                <div className=" mx-auto shadow-2xl   dark:bg-black">
                     <div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-32 md:py-32 md:px-10 lg:px-32 dark:text-gray-900">
                         <h1 className="text-5xl font-bold leading-none sm:text-6xl xl:max-w-3xl dark:text-white">Blog Area</h1>
                     </div>

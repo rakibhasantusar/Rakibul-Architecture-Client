@@ -14,7 +14,7 @@ const Service = ({ service }) => {
                     <img src={image} alt={title} className='max-h-60' />
                 </PhotoView>
             </PhotoProvider>
-            <div className="card-body text-white">
+            <div className="card-body text-gray-300">
                 <h2 className="card-title">{title}</h2>
                 <p>{description.slice(0, 100)} </p>
                 <div className="card-actions items-center justify-between">

@@ -31,32 +31,32 @@ const Home = () => {
                     </Link>
                 </div>
             </div>
-            <section className="p-6 my-24 dark:bg-black dark:text-gray-100 container mx-auto">
+            <section className="p-6 my-24 dark:bg-black dark:text-gray-300 container mx-auto">
                 <h2 className='text-5xl font-semibold mb-5'>Statistics Area</h2>
-                <hr className='w-[30%] mx-auto mb-20 border-2 border-dashed ' />
+                <hr className='w-[30%] mx-auto mb-10 border-1 ' />
                 <div className="container mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3">
                     <div className="flex flex-col justify-start m-2 lg:m-6">
-                        <p className="text-4xl font-bold leading-none lg:text-6xl">500+</p>
+                        <p className="text-4xl leading-none lg:text-6xl">500+</p>
                         <p className="text-sm sm:text-base">Clients</p>
                     </div>
                     <div className="flex flex-col justify-start m-2 lg:m-6">
-                        <p className="text-4xl font-bold leading-none lg:text-6xl">89K</p>
+                        <p className="text-4xl leading-none lg:text-6xl">89K</p>
                         <p className="text-sm sm:text-base">Followers on social media</p>
                     </div>
                     <div className="flex flex-col justify-start m-2 lg:m-6">
-                        <p className="text-4xl font-bold leading-none lg:text-6xl">3</p>
+                        <p className="text-4xl leading-none lg:text-6xl">3</p>
                         <p className="text-sm sm:text-base">Published books</p>
                     </div>
                     <div className="flex flex-col justify-start m-2 lg:m-6">
-                        <p className="text-4xl font-bold leading-none lg:text-6xl">80</p>
+                        <p className="text-4xl leading-none lg:text-6xl">80</p>
                         <p className="text-sm sm:text-base">Blogs</p>
                     </div>
                     <div className="flex flex-col justify-start m-2 lg:m-6">
-                        <p className="text-4xl font-bold leading-none lg:text-6xl">20</p>
+                        <p className="text-4xl leading-none lg:text-6xl">20</p>
                         <p className="text-sm sm:text-base">Years of experience</p>
                     </div>
                     <div className="flex flex-col justify-start m-2 lg:m-6">
-                        <p className="text-4xl font-bold leading-none lg:text-6xl">10+</p>
+                        <p className="text-4xl leading-none lg:text-6xl">10+</p>
                         <p className="text-sm sm:text-base">Workshops</p>
                     </div>
                 </div>
